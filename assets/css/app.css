@@ -418,6 +418,23 @@ tbody tr:hover { background: #f7faf8; }
 .status-dot { font-weight: 600; }
 .status-dot.is-active { color: #24734d; }
 
+.parish-directory { display: grid; gap: 16px; }
+.directory-parish { min-width: 0; }
+.directory-parish-heading { align-items: flex-start; }
+.directory-columns { display: grid; grid-template-columns: repeat(2, minmax(0, 1fr)); gap: 24px; }
+.directory-section-heading { display: flex; align-items: center; justify-content: space-between; gap: 12px; margin: 0 0 10px; }
+.directory-section-heading h3 { margin: 0; color: #274638; font-size: 13px; }
+.directory-section-heading > span { display: grid; min-width: 24px; height: 24px; place-items: center; border-radius: 99px; background: #eef3ef; color: #53665b; font-size: 10px; font-weight: 700; }
+.directory-people { display: grid; grid-template-columns: repeat(auto-fit, minmax(min(100%, 235px), 1fr)); gap: 8px; margin: 0; padding: 0; list-style: none; }
+.directory-people li { display: flex; min-width: 0; align-items: center; gap: 10px; padding: 9px; border: 1px solid #e9efeb; border-radius: 10px; }
+.directory-avatar-link { display: block; flex: 0 0 40px; width: 40px; height: 40px; overflow: hidden; border-radius: 50%; }
+.directory-avatar { display: block; width: 40px; height: 40px; border-radius: 50%; object-fit: cover; }
+.directory-avatar-placeholder { display: grid; flex: 0 0 40px; place-items: center; background: #eef3ef; color: #53665b; font-size: 15px; font-weight: 700; }
+.directory-person-copy { display: grid; min-width: 0; gap: 3px; }
+.directory-person-copy strong { overflow: hidden; color: #203b2e; font-size: 11px; text-overflow: ellipsis; white-space: nowrap; }
+.directory-person-copy small, .directory-empty { color: #6a7970; font-size: 10px; }
+.directory-empty { margin: 0; padding: 10px 0; }
+
 .search-toolbar {
     display: flex;
     align-items: center;
@@ -466,4 +483,5 @@ tbody tr:hover { background: #f7faf8; }
     .search-toolbar label { flex: 1 1 100%; }
     .search-toolbar input[type="search"], .search-toolbar select { min-width: 0; flex: 1 1 100%; }
     .search-toolbar .button { flex: 1; }
+    .directory-columns { grid-template-columns: 1fr; gap: 20px; }
 }
